@@ -1,5 +1,9 @@
+![image](https://github.com/balloonguy/ChromiumSater/assets/4008588/06e82906-ef1c-421d-8341-7fbdd6be3a18)
+
 # Balloonguy or 1st class netizen's Chromium Sater
-This is a persistent AutoHotkey launching file proxy macro to create a 3rd method so that no one has to choose between "To get future Chromium updates [...]" and using --test-type to get around "Managed by your organization" on Chromium forks.
+This is a persistent AutoHotkey launching file proxy macro to create a 3rd method so that no one has to choose between "To get future Chromium updates [...]" and using --test-type to get around "Managed by your organization" on Chromium forks as shown in this video.
+https://archive.is/sBKwH
+
 
 **Current version:** 1.0
 Supported platforms
