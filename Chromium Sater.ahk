@@ -1,4 +1,4 @@
-﻿;
+;
 ; Chromium Sater - Copyright (C) 2023 by 1st class netizen (balloonguy on Github) under the terms of the GNU General Public License as published by the Free Software Foundation, version 3
 ; first published 06/20/2023 
 ;
@@ -14,6 +14,28 @@ tray.add "Exit", Exit
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+
+EnFlagReadVal()
+{
+	try
+	EnFlag := RegRead("HKLM\Software\ChromiumSater","EnFlag",)
+	catch OSError as err
+	EnFlag := 0
+	return EnFlag
+}
+GetsName()
+{
+	try
+	sName := RegRead("HKLM\Software\ChromiumSater","Name",)
+	catch OSError as err
+	sName := 0
+	return sName
+}
+GetsPath()
+{
+	sPath := RegRead("HKLM\Software\ChromiumSater","Path",)
+	return sPath
+}
 
 sName := GetsName()
 
@@ -129,25 +151,4 @@ TextGui := Gui()
 Exit(*)
 {
     ExitApp
-}
-EnFlagReadVal()
-{
-	try
-	EnFlag := RegRead("HKLM\Software\ChromiumSater","EnFlag",)
-	catch OSError as err
-	EnFlag := 0
-	return EnFlag
-}
-GetsName()
-{
-	try
-	sName := RegRead("HKLM\Software\ChromiumSater","Name",)
-	catch OSError as err
-	sName := 0
-	return sName
-}
-GetsPath()
-{
-	sPath := RegRead("HKLM\Software\ChromiumSater","Path",)
-	return sPath
 }
