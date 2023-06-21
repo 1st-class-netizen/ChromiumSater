@@ -1,2 +1,2 @@
 # chromium-sater
-A persistent AutoHotkey macro launching file proxy
+A persistent AutoHotkey launching file proxy macro
