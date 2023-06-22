@@ -143,7 +143,6 @@ if (EnFlagReadVal()==1)
 		Sleep ResponsiveDelay
 	else
 		WinWait("ahk_class Chrome_WidgetWin_1")
-	Send "^{l}"
 	Send "{Tab 4}"
 	Send "{Enter}"
 	Sleep 200
