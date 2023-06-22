@@ -37,42 +37,6 @@ GetsPath()
 	return sPath
 }
 
-sName := GetsName()
-
-if(!sName)
-	MsgBox("Please fill out the Name and Path fields using the Configure Macro tray menu item")
-else
-{
-	sPath := GetsPath()
-	Run sName, sPath
-	if WinWait("ahk_class Chrome_WidgetWin_1",,0.3)
-		ResponsiveDelay := 250
-	else
-	{
-		ResponsiveDelay := 0
-		SetWinDelay 150
-	}
-}
-
-EnFlagReadVal()
-
-if (EnFlagReadVal()==1)
-{
-	tray.ToggleCheck "Enable/Disenable Macro"	
-	if(ResponsiveDelay)
-		Sleep ResponsiveDelay
-	else
-		WinWait("ahk_class Chrome_WidgetWin_1")
-	Send "^{l}"
-	Send "{Tab 4}"
-	Send "{Enter}"
-	Sleep 200
-	Send "^{l}"
-	Send "{Escape}"
-	Sleep 5000
-	Exit
-}
-
 EnDisMacro(*)
 {
 	EnFlag := !EnFlagReadVal()
@@ -91,7 +55,7 @@ TextGui := Gui()
 	else ; if (A_PtrSize = 4)
 		script_is := "32-bit"
 	Link := TextGui.Add("Link",
-    , 'Chromium Sater 1.0 - ' . script_is . '`nCopyright (C) 2023 by 1st-class-netizen on Github under the terms of the GNU General Public License as published by the Free Software`nFoundation, version 3. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;`nwithout even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.`nIf Chromium Sater is very useful to you or if it plays the role of a laborsaving device, you can also show your appreciation by '
+    , 'Chromium Sater 1.1 - ' . script_is . '`nCopyright (C) 2023 by 1st-class-netizen on Github under the terms of the GNU General Public License as published by the Free Software`nFoundation, version 3. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;`nwithout even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.`nIf Chromium Sater is very useful to you or if it plays the role of a laborsaving device, you can also show your appreciation by '
     . '<a id="help" href="https://www.autohotkey.com/docs/">buying me a coffee</a>.')
 	Btn3 := TextGui.Add("Button", "x350", "Close") 
 	Btn3.Focus()
@@ -151,4 +115,39 @@ TextGui := Gui()
 Exit(*)
 {
     ExitApp
+}
+
+sName := GetsName()
+
+if(!sName)
+	MsgBox("Please fill out the Name and Path fields using the Configure Macro tray menu item")
+else
+{
+	sPath := GetsPath()
+	Run sName, sPath
+	if WinWait("ahk_class Chrome_WidgetWin_1",,0.3)
+		ResponsiveDelay := 250
+	else
+	{
+		ResponsiveDelay := 0
+		SetWinDelay 150
+	}
+}
+
+EnFlagReadVal()
+
+if (EnFlagReadVal()==1)
+{
+	tray.ToggleCheck "Enable/Disenable Macro"	
+	if(ResponsiveDelay)
+		Sleep ResponsiveDelay
+	else
+		WinWait("ahk_class Chrome_WidgetWin_1")
+	Send "^{l}"
+	Send "{Tab 4}"
+	Send "{Enter}"
+	Sleep 200
+	Send "^{l}"
+	Sleep 5000
+	Exit
 }
