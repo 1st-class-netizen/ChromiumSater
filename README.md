@@ -3,7 +3,7 @@
 This is a persistent AutoHotkey launching file proxy macro to create a 3rd method so that no one has to choose between "To get future Chromium updates [...]" and using --test-type to get around "Managed by your organization" on Chromium forks as shown in this video.
 https://archive.is/sBKwH
 
-**Current version:** 1.0
+**Current version:** 1.1
 ### Supported Platforms
 Windows 7, 8, 8.1, 10
 ### Done or Discarded Compatibility Tests
