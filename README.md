@@ -5,7 +5,7 @@ https://archive.is/sBKwH
 
 **Current version:** 1.1
 ### Supported Platforms
-Windows 7, 8, 8.1, 10
+Windows 7 and prior
 ### Done or Discarded Compatibility Tests
 32 and 64-bit system type executables were tested using Ungoogled Chromium from a restart to ensure they were working. The browser has only been run from a SSD, however with the delta of around 6 total seconds to launch from restart and 1 second afterwards and it stll working, it is most likely entirely a memory delay rather than CPU, and thus should work on a disk drive.
 
